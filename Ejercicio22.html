@@ -1,0 +1,60 @@
+<html>
+<title>Ejercicio22.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+    15. Cuando hablamos de ángulos, normalmente utilizamos los grados sexagesimales (se suelen representar como “deg”, 
+    una circunferencia completa son 360º deg). Sin embargo, en trigonometría es más común utilizar los radianes 
+    (“rad”, una circunferencia completa son 2π rad).
+
+De esta forma, 360º equivalen a 2π. Las funciones trigonométricas de javascript, como la mayoría de lenguajes, 
+trabajan en radianes, sin embargo en muchas ocasiones nosotros vamos a querer trabajaren grados. Por ello, se pide:
+
+a) Implementar una función llamada deg2rad(x) que transforme de grados a radianes, y su inversa rad2deg(x)
+
+b) Implementar una función sinDeg(x)que devuelva el seno del ángulo x y otra función cosDeg(x) que devuelva el coseno del ángulo x 
+(en ambos casos x está en grados).
+
+c) El seno y el coseno están relacionados por la siguiente ecuación: sin2x + cos2x = 1.
+
+Utilizar esta relación para implementar una función sinDegAlt(x) que obtenga el seno de un ángulo x 
+(en grados) usando para ello la función cosDeg(x) anteriormente implementada.
+
+Implementar también la función inversa al apartado anterior: cosDegAlt(x) usando para ello sinDeg(x)
+
+
+      */ 
+     var x = prompt("Introduce los grados");
+    var rad = prompt("Introduzca los radianes");
+    var s = prompt("Introduzca el angulo");
+    var c = prompt("Introduzca el angulo");
+    //grados a radianes
+      function deg2rad(x){
+        
+        var pi = Math.PI;
+        return x * (pi/180);
+          }
+          //radianes a grados
+          function rad2deg(rad) {
+              
+              return rad * Math.sin(360 * ((284 + 196)/365));;
+          }
+          //sen
+          function sinDegAlt(s) {
+              return (1-Math.cos(2*s)/(2));
+          }
+          //cos
+          function cosDeg(c) {
+              return (1-Math.sin(2*s)/(2));
+          }
+          console.log(deg2rad(x));
+          console.log(rad2deg(rad));
+          console.log(sinDegAlt(s));
+          console.log(cosDeg(c));
+    </script>
+</body>    
+</html>

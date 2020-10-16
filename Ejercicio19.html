@@ -1,0 +1,48 @@
+<html>
+<title>Ejercicio19.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+     12. ¿Cuántos segundos han pasado desde que naciste? ¿y minutos? ¿y horas? ¿y días? 
+     Implementaruna función que dada una fecha cualquiera en formato “yyyy-mm-dd”, 
+     devuelva cuánto tiempo ha pasado desde esa fecha. La función aceptará un segundo parámetro para indicar en 
+     qué unidad se quiere obtener el resultado: 
+     ‘d’ → días, ‘h’ → horas, ‘m’ → minutos y ‘s’ → segundos. Si no es ninguna de estas unidades, se mostrará un error.
+      */ 
+   
+     var ano, mes, dia;
+     ano =prompt("Introduzca el año");
+     mes =prompt("Introduzca el mes");
+     dia =prompt("Introduzca el dia");
+      var nacimiento = new Date(ano, mes, dia)
+var hoy = new Date
+
+var tiempoPasado= new Date() - nacimiento
+
+//calculo segundos 
+var segundos = tiempoPasado/ 1000
+
+var minutos = segundos / 60
+tiempoPasado= tiempoPasado- (minutos - segundos)
+
+var horas = minutos / 60
+tiempoPasado= tiempoPasado- ( horas - minutos)
+
+var dias = horas / 24
+tiempoPasado= tiempoPasado- (dias - horas)
+
+
+var meses = dias / 30.416666666666668
+tiempoPasado= tiempoPasado- (meses - dias)
+
+var anos = meses / 12
+
+console.log(`Han pasado ${anos} años, ${meses} meses,  ${dias} dias, ${horas} horas, y ${minutos} minutos desde que naciste.`)
+			 
+    </script>
+</body>    
+</html>

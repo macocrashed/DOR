@@ -1,0 +1,88 @@
+<html>
+<title>Ejercicio16.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*9. Escribir un programa que proporcione el desglose en el número mínimo de billetes y 
+    monedas de una cantidad entera cualquiera de euros dada. Recuerda que los billetes y monedas de uso legal 
+    disponibles hasta 1 euro son de: 500, 200, 100, 50, 20, 10, 5, 2 y 1 euros. Para ello deben solicitar al usuario un número entero 
+    (comprobar que lo es) y desglosar la cantidad en el número mínimo de billetes y monedas.
+    */
+      //declaración de variables
+    var b500,b200,b100,b50,b10,b5,m2,m1,c50,c20,c10,c5,c2,c1;
+    //lectura de entrada. Capital de dinero enEuros.
+    E=prompt('Dame la cantidad de dinero: ','€');
+    //proceso
+    if(E>=500){
+        b500=(E-(E%500))/500; //obtenemos el cociente exacto, billetes de 200€.
+        //document.write(E,'€ ',E/200,' cociente </br>');
+        E=E%500;
+        document.write(b500,' billetes de 500€ </br>');
+        
+    }
+    if(E>=200){
+        b200=(E-(E%200))/200; //obtenemos el cociente exacto, billetes de 200€.
+        //document.write(E,'€ ',E/200,' cociente </br>');
+        E=E%200;
+        document.write(b200,' billetes de 200€ </br>');
+        
+    }
+    if(E>=100){
+        b100=(E-(E%100))/100; //obtenemos el cociente exacto, billetes de 100€.
+        //document.write(E,'€ ',E/100,' cociente </br>');
+        E=E%100;
+        document.write(b100,' billetes de 100€ </br>');
+        
+    }
+    if(E>=50){
+        b50=(E-(E%50))/50; //obtenemos el cociente exacto, billetes de 50€.
+        //document.write(E,'€ ',E/50,' cociente </br>');
+        E=E%50;
+        document.write(b50,' billetes de 50€ </br>');
+       
+    }
+    if(E>=20){
+        b20=(E-(E%20))/20; //obtenemos el cociente exacto, billetes de 20€.
+        //document.write(E,'€ ',E/20,' cociente </br>');
+        E=E%20;
+        document.write(b20,' billetes de 20€ </br>');
+    
+    }
+    if(E>=10){
+        b10=(E-(E%10))/10; //obtenemos el cociente exacto, billetes de 10€.
+        //document.write(E,'€ ',E/10,' cociente </br>');
+        E=E%10;
+        document.write(b10,' billetes de 10€ </br>');
+        
+    }
+    if(E>=5){
+        b5=(E-(E%5))/5; //obtenemos el cociente exacto, billetes de 5€.
+        //document.write(E,'€ ',E/5,' cociente </br>');
+        E=E%5;
+        document.write(b5,' billetes de 5€ </br>');
+        
+    }
+    if(E>=2){
+        m2=(E-(E%2))/2; //obtenemos el cociente exacto, monedas de 2€.
+        //document.write(E,'€ ',E/2,' cociente </br>');
+        E=E%2;
+        document.write(m2,' monedas de 2€ </br>');
+        
+    }
+    if(E>=1){
+        m1=(E-(E%1))/1; //obtenemos el cociente exacto, monedas de 1€.
+        //document.write(E,'€ ',E/1,' cociente </br>');
+        E=E%1;
+        document.write(m1,' monedas de 1€ </br>');
+       
+    }
+    
+    				
+			
+			 
+    </script>
+</body>    
+</html>

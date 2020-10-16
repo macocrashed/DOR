@@ -1,0 +1,38 @@
+<html>
+<title>Ejercicio8.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+    1. Implementar el control de 3 variables (a, b, c) para que se muestre un mensaje de error cuando se 
+    produzca alguna de las siguientes situaciones (el mensaje de error debe indicar qué situación(es) no se cumplieron):
+
+    a) Al menos una de las 3 variables es negativa
+
+    b) Las tres variables son iguales a 0
+
+    c) Las suma de las 3 variables es mayor que 10 Y las tres variables son diferentes
+    */
+     
+     
+				var  a = parseInt(prompt('Introduzca un numero'));
+                var b = parseInt(prompt('Introduzca un numero'));
+                var c = parseInt(prompt('Introduzca un numero'));
+                
+                
+				
+				if(a<0||b<0||c<0){
+					alert('Error 1');
+				}else if (a==0||b==0||c==0) {
+                    alert('Error 2');
+                } else if(a + b+ c <10 && a!==b && b!==c){
+                    alert('Error 3');
+                }
+				
+			 
+    </script>
+</body>    
+</html>

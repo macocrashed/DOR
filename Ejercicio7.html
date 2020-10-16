@@ -1,0 +1,38 @@
+<html>
+<title>Ejercicio6.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+    ACTIVIDAD 7
+
+    Hacer un juego para que el usuario averigüe la capital de un país previamente definida.
+    Tiene tres intentos y debe mostrase en pantalla si ha acertado o no, incluyendo en este caso el número de intentos que le quedan.
+    */
+     
+     
+				var capital = "Madrid";
+				
+				var contador = 1;
+                var respuesta = prompt('Introduzca la capital');
+                console.log(respuesta);
+				while(respuesta!==capital && contador<3){
+					
+			        respuesta = prompt('La respuesta no es correcta. Inténtelo de nuevo');
+			
+					contador++;
+					console.log(contador);
+				}
+				if(contador==3){
+					alert('Has superado el número máximo de intentos. Se acabó');
+				}else{
+					alert('Enhorabuena. Ha acertado');
+				}
+				
+			 
+    </script>
+</body>    
+</html>

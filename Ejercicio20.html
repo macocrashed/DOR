@@ -1,0 +1,44 @@
+<html>
+<title>Ejercicio20.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+     13. Implementar una función hdec2hms(x) que transforme una hora en formato decimal a su equivalente en formato hh:mm:ss (en texto). 
+     Por ejemplo, 8.25 = “8:15:00” y 10.12 = “10:07:12”.Implementar también la función inversa hms2hdec(h,m,s).
+      */ 
+     var x = prompt("Introduce la hora");
+     var resultado = hdec2hms(x);
+        alert(resultado);
+      function hdec2hms(x){
+        
+    var decimalTime = parseFloat(x);
+    decimalTime = decimalTime * 60 * 60;
+    var hora = Math.floor((decimalTime / (60 * 60)));
+    decimalTime = decimalTime - (hora * 60 * 60);
+    var minuto = Math.floor((decimalTime / 60));
+    decimalTime = decimalTime - (minuto * 60);
+    var segundo = Math.round(decimalTime);
+    if(hora < 10)
+    {
+	    hora = "0" + hora;
+    }
+    if(minuto < 10)
+    {
+	    minuto = "0" + minuto;
+    }
+    if(segundo < 10)
+    {
+	    segundo = "0" + segundo;
+    }
+    var mesage = alert("" + hora + ":" + minuto + ":" + segundo);
+    return mesage;
+          }
+
+			 
+    </script>
+</body>    
+</html>

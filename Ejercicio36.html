@@ -8,18 +8,39 @@
     <script>
         /*
         2-Realiza una función sumatoria utilizando “arguments”. Utiliza un bucle for. El usuario debe introducir 7 números. Resultado muéstralo en consola.
-        */
-
-       var x; 
-       function suma(x){
-           for (var i; i < 8; i++) {
-            x = prompt("Introduce un numero");
-            var resultado = x + x; 
+        
+       var misuma= 0; 
+       var i = 0;
+       function suma(i){
+           for (i= 0; i < 8; i++) {
+            arguments[i] = prompt("Introduce un numero");
+            console.log(arguments[i]);
+            misuma+=arguments[i]);
            }
-        console.log(resultado);
+        return misuma;
         
        }
-       suma(x);
+       console.log(suma(i));*/
+       var n1, n2, n3, n4, n5, n6, n7;
+        //Introducimos los numeros
+      n1=parseInt(prompt("Introduzca el numero"));
+      n2=parseInt(prompt("Introduzca el numero"));
+      n3=parseInt(prompt("Introduzca el numero"));
+      n4=parseInt(prompt("Introduzca el numero"));
+      n5=parseInt(prompt("Introduzca el numero"));
+      n6=parseInt(prompt("Introduzca el numero"));
+      n7=parseInt(prompt("Introduzca el numero"));
+       function total() {
+    var total = 0;
+    //Bucle for para introducir los numeros y sumarlos.
+        for( var i = 0; i < arguments.length; i++){
+          
+            total += arguments[i];
+        }
+    return total;
+}
+console.log(total(n1,n2,n3,n4,n5, n6, n7));
+
     </script>
 </body>    
 </html>

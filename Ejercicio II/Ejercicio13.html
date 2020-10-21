@@ -11,9 +11,12 @@
   Implementar una función que realice esta conversión (comprueba que 32ºF son 0ºC y que 75.2ºF son 24ºC).
 
     */
+        //Las variables utilizar
         var F = prompt("Introduzca los grados F: "); 
         var resultado = conversionF(F);
+        //llamamos a la funcion que crearemos
         alert(resultado);
+        //esta funcion convierte los grados farhenheit a celsius.
         function conversionF(F){
         var C = (F -32) * 5/9; 
         return C;       

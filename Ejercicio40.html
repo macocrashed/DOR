@@ -1,0 +1,29 @@
+<html>
+<title>Ejercicio40.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        /*
+       6-    Crear una expresión regular que valide una dirección de email. Para simplificar, 
+       los valores antes de la @ pueden contener cualquier carácter alfanumérico, y los caracteres . y -, mientras que los valores 
+       tras la @ pueden contener caracteres alfanuméricos, y el tipo de dominio puede tener una longitud de 2 o 3 caracteres.
+        */
+        //e es el email
+        var e = prompt("Introduzca el email");
+        
+       // RegExp = /^[0-9]{1,4}(?!.*(LL|CH))[BCDFGHJKLMNPRSTVWXYZ]{3}$/+
+       //Expresion regular
+       RegExp = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,3})+$/
+       //Validacion
+        if(RegExp.test(e))
+        alert("el email es correcto"); 
+    else {
+    alert("el email NO es correcto"); 
+} 
+
+    </script>
+</body>    
+</html>

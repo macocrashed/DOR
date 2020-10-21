@@ -25,23 +25,23 @@ var tiempoPasado= new Date() - nacimiento
 
 //calculo segundos 
 var segundos = tiempoPasado/ 1000
-
+//calculo minutos
 var minutos = segundos / 60
 tiempoPasado= tiempoPasado- (minutos - segundos)
-
+//calculo horas
 var horas = minutos / 60
 tiempoPasado= tiempoPasado- ( horas - minutos)
-
+//calculo dias
 var dias = horas / 24
 tiempoPasado= tiempoPasado- (dias - horas)
-
+//calculo meses
 
 var meses = dias / 30.416666666666668
 tiempoPasado= tiempoPasado- (meses - dias)
-
+//calculo años  
 var anos = meses / 12
 
-console.log(`Han pasado ${anos} años, ${meses} meses,  ${dias} dias, ${horas} horas, y ${minutos} minutos desde que naciste.`)
+console.log(`Han pasado ${anos} años, ${meses} meses,  ${dias} dias, ${horas} horas, ${minutos} minutos, ${segundos} segundos trascurridos desde que naciste`)
 			 
     </script>
 </body>    

@@ -1,0 +1,31 @@
+<html>
+<title>Ejercicio43.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        /*
+       9-Analiza los diferentes métodos de string y crea 3 ejercicios aplicados donde el usuario deba intervenir.
+        */
+        //Ejercicio 1
+
+        texto2= prompt("Escribe un texto que contengan minúsculas : ");
+        texto2Mayusculas = texto2.toUpperCase();//cambiamos a mayúsculas la cadena de texto almacenada en la variable texto2
+        document.write(texto2Mayusculas);
+        //Ejercicio 2
+        var texto1= prompt("Escribe un texto de una o varias palabras:");
+        var longTexto = texto1.length;   //el método length, nos calcula el nº de caracteres del texto almacenado en 'texto1'
+        document.write("El texto '" + texto1 + "' tiene: " + longTexto + " caracteres (incluyendo espacios en blanco)");
+
+        //Ejercicio 3
+        var texto2= "Ejemplo de búsqueda con un método Javascript en estos contenidos de introducción a Javascript de Digital Learning ";
+        var posicionPrimera = texto2.indexOf("Javascript");
+        var posicionUltima = texto2.lastIndexOf("Javascript"); 
+ 
+        document.write("En el texto: " + "<br><em>" + texto2 + "</em><br>" + "la primera aparición de la palabra Javascript, comienza en la posición: " + posicionPrimera + "<br>");
+        document.write("La última aparición de la palabra Javascript, comienza en la posición: " + posicionUltima);
+    </script>
+</body>    
+</html>

@@ -1,0 +1,30 @@
+
+<html>
+<title>Ejercicio40.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        /*
+      7-    Crear una expresión regular valide una fecha en formato "XX/XX/XXXX",
+       donde "X" es un dígito. Probarlo con la expresión: "Nací el 05/04/1982 en Donostia.".
+*/
+        //fecha es la variable fecha
+        var fecha = prompt("Introduzca la fecha");
+        
+       // RegExp = /^[0-9]{1,4}(?!.*(LL|CH))[BCDFGHJKLMNPRSTVWXYZ]{3}$/+
+       //Expresion regular
+       RegExp = /^([012][1-9]|3[01])(\/)(0[1-9]|1[012])\2(\d{4})$/;
+
+        //Validacion
+        if(RegExp.test(fecha))
+        document.write("Nací el "+fecha+" en Donostia.")
+    else {
+    alert("la fecha NO es correcta"); 
+} 
+
+    </script>
+</body>    
+</html>

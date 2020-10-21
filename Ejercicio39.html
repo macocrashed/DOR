@@ -1,0 +1,28 @@
+<html>
+<title>Ejercicio39.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        /*
+        5-    Valida un nombre de usuario en twitter, 
+        empieza por @ y puede contener letras mayúsculas y minúsculas, números, guiones y guiones bajos.
+        */
+        //user es el nombre de usuario
+        var user = prompt("Introduzca el nombre de usuario");
+        
+       // RegExp = /^[0-9]{1,4}(?!.*(LL|CH))[BCDFGHJKLMNPRSTVWXYZ]{3}$/+
+       //Expresion regular
+       RegExp = /^[@a-zA-Z0-9_-]{10,16}$/
+       //Validacion
+        if(RegExp.test(user))
+        alert("el usuario es correcto"); 
+    else {
+    alert("el usuario NO es correcto"); 
+} 
+
+    </script>
+</body>    
+</html>

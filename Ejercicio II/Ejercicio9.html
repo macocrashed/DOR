@@ -22,14 +22,19 @@
 
                 var resultado = par(x);
                 alert("El numero  introducido es: "+ x+". "+resultado);
+                //La funcion par define un numero par
                 function par (x) {
                 if(x==0){
+                    //si es 0 sale el mensaje
 					mensaje = "Este es facil... ¡prueba otro!";
 				}else if (x==2||x==4||x==6) {
+                     //si es 2, 4, 6 sale el mensaje
                     mensaje = "El numero es par";
                 } else if(x==1||x==3||x==5){
+                     //si es 1, 3, 5 sale el mensaje
                     mensaje = "El numero es impar";
                 } else{
+                     //si no cumple ninguna condicion sale el mensaje
                     mensaje = "¡¡Solo se contar de 0 a 6!!";
                 }
                 return mensaje;

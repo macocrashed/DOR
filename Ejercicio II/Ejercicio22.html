@@ -43,18 +43,28 @@ Implementar también la función inversa al apartado anterior: cosDegAlt(x) usan
               
               return rad * Math.sin(360 * ((284 + 196)/365));;
           }
-          //sen
+          //seno
+          function sinDeg(sin){
+              return Math.cos(cos);
+          }
+          //coseno
+          function cosDeg(cos){
+              Math.sin(sin);
+          }
+          //seno en grados
           function sinDegAlt(s) {
               return (1-Math.cos(2*s)/(2));
           }
-          //cos
-          function cosDeg(c) {
+          //coseno en grados
+          function cosDegAlt(c) {
               return (1-Math.sin(2*s)/(2));
           }
           console.log(deg2rad(x));
           console.log(rad2deg(rad));
+          console.log(sinDeg(sin));
+          console.log(cosDeg(cos));
           console.log(sinDegAlt(s));
-          console.log(cosDeg(c));
+          console.log(cosDegAlt(c));
     </script>
 </body>    
 </html>

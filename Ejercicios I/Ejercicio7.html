@@ -17,15 +17,17 @@
 				var capital = "Madrid";
 				
 				var contador = 1;
-                var respuesta = prompt('Introduzca la capital');
+                var respuesta = prompt('Introduzca la capital de españa');
                 console.log(respuesta);
-				while(respuesta!==capital && contador<3){
+				// Aqui hacemos un bucle while para ver si es correcto o no
+				while(respuesta!=capital && contador<3){
 					
 			        respuesta = prompt('La respuesta no es correcta. Inténtelo de nuevo');
 			
 					contador++;
 					console.log(contador);
 				}
+				//Aqui hacemso un condicional sobre el n umero de intentos
 				if(contador==3){
 					alert('Has superado el número máximo de intentos. Se acabó');
 				}else{

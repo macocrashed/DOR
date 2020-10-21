@@ -1,0 +1,56 @@
+<html>
+<title>Ejercicio42.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        /*
+       8-Realiza 3 ejercicios anteriores utilizando funciones anónimas.
+        */
+        //VAlidar matricula
+        var mensage1 = function (){
+        var m = prompt("Introduzca la matricula")
+        
+        RegExp = /^[0-9]{1,4}(?!.*(LL|CH))[BCDFGHJKLMNPRSTVWXYZ]{3}$/
+        if(RegExp.test(m))
+        mesage =alert("La matrícula es correcta"); 
+    else {
+    mesage =alert("La matrícula NO es correcta"); 
+} 
+return mesage;
+        }
+       mensage1();
+       //validar usuario twitter
+       var mensage2 = function(){
+       var user = prompt("Introduzca el nombre de usuario");
+        
+        // RegExp = /^[0-9]{1,4}(?!.*(LL|CH))[BCDFGHJKLMNPRSTVWXYZ]{3}$/+
+        RegExp = /^[@a-zA-Z0-9_-]{10,16}$/
+         if(RegExp.test(user))
+         alert("el usuario es correcto"); 
+     else {
+     alert("el usuario NO es correcto"); 
+        } 
+       }
+       mensage2();
+
+        //validar email
+        var mensage3 = function (){
+        var e = prompt("Introduzca el email");
+        
+        // RegExp = /^[0-9]{1,4}(?!.*(LL|CH))[BCDFGHJKLMNPRSTVWXYZ]{3}$/+
+        RegExp = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+         if(RegExp.test(e))
+         alert("el email es correcto"); 
+     else {
+     alert("el email NO es correcto"); 
+    } 
+    }
+       mensage3();
+ 
+
+    </script>
+</body>    
+</html>

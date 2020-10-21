@@ -1,0 +1,25 @@
+<html>
+<title>Ejercicio38.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        /*
+        4-Realiza la validación de una matrícula de un coche 0000-XXX mediante expresiones regulares.
+        */
+        //m es la matricula
+        var m = prompt("Introduzca la matricula")
+        //La expresion regular
+        RegExp = /^[0-9]{1,4}(?!.*(LL|CH))[BCDFGHJKLMNPRSTVWXYZ]{3}$/
+        //La validacion.
+        if(RegExp.test(m))
+        alert("La matrícula es correcta"); 
+    else {
+    alert("La matrícula NO es correcta"); 
+} 
+
+    </script>
+</body>    
+</html>

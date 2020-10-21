@@ -10,11 +10,11 @@
      10. Muestra la fecha y hora actuales en formato: “DD/MM/YYYY hh:mm:ss TimeZone”.
       */ 
       let date = new Date()
-
-let day = date.getDate()
-let month = date.getMonth() + 1
-let year = date.getFullYear()
-
+// las variables a utilizar
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+//aqui mostramos la fecha.
 if(month < 10){
   console.log(`${day}-0${month}-${year}`)
 }else{

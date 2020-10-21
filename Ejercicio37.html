@@ -1,0 +1,39 @@
+<html>
+<title>Ejercicio37.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        /*
+        3-    Realiza una función que calcule la media de 5 notas introducidas por el usuario. Utiliza “arguments”. 
+        Muestra el resultado por consola.
+        */var n1, n2, n3, n4, n5;
+        //Introducimos los numeros
+      n1=parseInt(prompt("Introduzca el numero"));
+      n2=parseInt(prompt("Introduzca el numero"));
+      n3=parseInt(prompt("Introduzca el numero"));
+      n4=parseInt(prompt("Introduzca el numero"));
+      n5=parseInt(prompt("Introduzca el numero"));
+     
+        function media()
+{
+  var total=0, res, numDatos, i ;
+  var n= 0;
+  numDatos = arguments.length;
+ 
+  
+  for (i= 0; i < numDatos; i++)
+    {
+         
+     total += arguments[i];
+    }
+    //Formula de la media
+  res = total/numDatos;
+  return res;
+}
+console.log( media( n1,n2,n3,n4,n5) );
+    </script>
+</body>    
+</html>

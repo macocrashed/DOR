@@ -10,10 +10,12 @@
      11. Construye una fecha a partir del texto “02/04/2015”. Muestra la fecha con console.log, ¿qué obtienes?
       Prueba ahora con “2015-04-02”.¿Cómo podrías crear una fecha con el texto “April 02, 2015”?
       */ 
+
       var date = new Date("2015-04-02")
-     
+// las variables a utilizar    
 let day = date.getDate()
 let month = date.getMonth() + 1
+//cambiamos el mes por april con un if
 if (month == 4) {
     month= "abril";
 }

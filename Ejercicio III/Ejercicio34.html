@@ -1,0 +1,37 @@
+<html>
+<title>Ejercicio34.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+   11.Modificar el ejercicio anterior para que si el número ya existía, nos indique cuántas veces había aparecido con anterioridad.
+    */ 
+   //declaramos variables
+    var array=new Array(10);
+     var valor, ind;
+
+//Creamos numero aleatorio
+for(ind = 0; ind < array.length; ind++)
+   {
+    valor = Math.random()*20;
+    array[ind] = Math.round(valor);
+   }
+document.write("[ "+array+" ]"+`</br>`);
+
+    
+     
+     var repetidos = {};
+
+array.forEach(function(numero){
+  repetidos[numero] = (repetidos[numero] || 0) + 1;
+});
+
+document.write(repetidos);
+
+
+    </script>
+</body>    
+</html>

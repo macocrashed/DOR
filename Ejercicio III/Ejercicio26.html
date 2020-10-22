@@ -1,0 +1,34 @@
+<html>
+<title>Ejercicio26.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+    4.Crear una función que genere un array aleatorio, usando 3 parámetros: número de elementos 
+    (por defecto 10, valor mínimo del elemento (por defecto 100), valor máximo (por defecto 200).
+    */ 
+   var  matriz=new Array();
+    function rellenar(matriz)
+{
+var num = 10,valormax=200, valormin=100,valor;
+largo = matriz.length;
+for(var i = 0; i < num; i++)
+   {
+    valor = parseInt(Math.random()*(valormax-valormin)+valormin);
+    matriz[i] = Math.round(valor);
+    barra = +valor+", ";
+   }
+   return barra;
+}
+document.write("[ ");
+for (var j = 0 ; j < 10; j++) {
+  
+document.write(rellenar(matriz));
+}
+document.write(" ]");
+    </script>
+</body>    
+</html>

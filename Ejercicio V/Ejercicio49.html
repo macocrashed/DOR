@@ -1,0 +1,40 @@
+
+<html>
+    <title>Ejercicio40.html</title>
+    <head>
+        
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            /*
+         ACTIVIDAD 1
+
+Crea un script donde se realicen las siguientes acciones:
+
+a) Pedir al usuario un nombre de titular, apellidos de titular y saldo de la cuenta.
+
+b) Crear un nuevo objeto cuentaBancaria que se inicializará con los datos facilitados por el usuario. 
+
+c) Mostrar un mensaje informando de que se ha creado la nueva cuenta bancaria y de los datos asociados a la cuenta bancaria creada.
+
+
+    */
+   //creamos el objeto
+   var nombre= prompt("Introduzca el nombre del titular"),
+     apellidos= prompt("Introduzca los apellidos del titular"),
+     saldo= prompt("Introduzca el saldo de su cuenta bancaria");
+    var cuentaBancaria ={
+    nombre,
+    apellidos,
+    saldo,
+    
+};
+//mostramos el mensaje
+alert("Se ha creado una nueva cuenta bancaria con los siguientes datos: nombre: "+nombre+" apellidos: "+apellidos+" saldo: "+saldo );
+console.log(cuentaBancaria.nombre);
+console.log(cuentaBancaria.apellidos);
+console.log(cuentaBancaria.saldo);
+        </script>
+    </body>    
+    </html>

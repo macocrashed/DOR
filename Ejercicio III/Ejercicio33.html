@@ -1,0 +1,42 @@
+<html>
+<title>Ejercicio33.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+   10.Crear un array de 50 números aleatorios enteros aleatorios entre 10 y 20. Para cada elemento, 
+   informar si es la primera vez que aparece, o si se trata de un elemento repetido.
+    */ 
+   //Declaramos variables
+    var array=new Array(10);
+     var valor, ind;
+
+//Creamos el array de numeros aleatorios
+for(ind = 0; ind < array.length; ind++)
+   {
+    valor = Math.random()*20;
+    array[ind] = Math.round(valor);
+   }
+document.write("[ "+array+" ]"+`</br>`);
+//bucle para comprobar si esta repetido o no
+    var repetido = "no repetido";
+    for (var i = 0; i < array.length; i++) {
+        for (var j = 0; j < array.length; j++) {
+            if (array[i] == array[j] && i != j) { //revisamos que i sea diferente de j, para que no compare el mismo elemento exacto.
+                repetido= "repetido";
+             }else{
+                var repetido = "no repetido";
+             }
+             
+         }
+         document.write(repetido+`</br>`);
+     }
+     
+
+
+    </script>
+</body>    
+</html>

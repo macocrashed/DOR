@@ -1,0 +1,90 @@
+
+<html>
+    <title>Ejercicio40.html</title>
+    <head>
+        
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            /*
+         ACTIVIDAD 2
+
+Vamos a crear una pequeña base de datos de viajeros para una agencia de viajes:
+
+1.Crea una estructura para guardar los datos de personas (nombre, apellidos, edad)
+ 
+2.A partir de la estructura anterior, vamos a añadir los datos de los viajeros: una lista de países visitados (los países NO se pueden repetir) y si tiene o no tarjeta de puntos en nuestra agencia 
+ 
+3.Ahora crea otra estructura para guardar los datos de los viajeros, los identificaremos por un código de cliente de nuestra agencia
+   
+4.Crea las siguientes funciones/métodos para gestionar nuestra base de datos:
+    1.Crear un nuevo viajero (debe comprobar si el código de cliente ya existe. Si es así, muestra un mensaje y no lo inserta)
+    2.Eliminar un viajero (identificado por su código de cliente)
+    3.Mostrar todos los viajeros (sus datos personales, qué países ha visitado y si tiene tarjeta)
+    4.Añadir un país a un viajero (identificado por su código de cliente)
+    5.Eliminar un país a un viajero (identificado por su código de cliente)
+ 
+5.Haz algunas pruebas para comprobar que todo funciona bien, realizando llamadas a las funciones/métodos antes creados.
+
+    */
+   //creamos el constructor
+  
+     function Persona(nom,apell, ed){
+    this.nombre = nom;
+    this.apellidos = apell;
+    this.edad = ed;
+}
+function Viajeros(pa,tar){
+    this.paises = pa;
+    this.tarjetas = tar;
+
+}
+function ViajerosC(c){
+    this.cod= c;
+}
+Viajeros.prototype = Object.create(Persona.prototype);
+ViajerosC.prototype = Object.create(Persona.prototype);
+Viajeros.prototype.constructor = Viajeros;
+ViajerosC.prototype.constructor = ViajerosC;  
+//4.
+var viajero1 = new Viajeros();
+var viajero2 = new Viajeros();
+var viajero3 = new Viajeros();
+function validarCod(){
+    if(cod != null){
+        alert("Existe ya un codigo de cliente");
+        var viajero1 = new Viajeros();
+    }else{
+        var viajero1 = new Viajeros(2);
+    }
+
+}
+function eliminarViajero(){
+    delete viajero1
+    
+}
+
+function mostrarViajeros(){
+    console.log(viajero1.nombre);
+    console.log(viajero1.apellidos);
+    console.log(viajero1.paises);
+    console.log(viajero1.tarjetas);
+   
+    
+}
+
+function eliminarPais(){
+    delete viajero1.paises;
+    
+}
+//5
+validarCod();
+eliminarPais();
+eliminarViajero();
+mostrarViajeros();
+
+
+        </script>
+    </body>    
+    </html>

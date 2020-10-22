@@ -1,0 +1,60 @@
+<html>
+<title>Ejercicio32.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+   9.Crear una función que devuelva el valor máximo y mínimo del array, e indique el índice de estos valores 
+   (si el valor se repite, informar sólo sobre la primera vez que aparezca). Probar con un array aleatorio de 20 números entre -100 y 100.
+    */ 
+   //Declarar variables
+    var myArray = [1, 2, 3, 4, 99, 20, 27];
+    var maxValue = myArray[0];
+    var minValue = myArray[0];
+    var valori = 0;
+    var valorj= 0;
+    var num = 20,valormax=100, valormin=-100,valor;
+    minYmax();
+    minYmaxRandom();
+    function minYmax(){
+    //Recorremos el bucle para buscar el valor maximo y minimo
+for(var i = 1; i < myArray.length; i++) {
+   var currentValue = myArray[i];
+   if(currentValue > maxValue) {
+      maxValue = currentValue;
+      valori = i;
+   }
+   if(currentValue < minValue){
+       minValue= currentValue;
+       valorj= i;
+   }
+}
+//mostrar maximo y minimo y su indice
+console.log(maxValue+" pos: "+ valori);
+console.log(minValue+" pos: "+valorj);
+    }
+    function minYmaxRandom(){
+        myArray2= [1, 2, 3, 4, 99, 20, 27, -6, 7, 9, 23, -45, 66, -22, 77, 12, 32, -65, -78];;
+         //Recorremos el bucle para buscar el valor maximo y minimo
+for(var i = 1; i < myArray2.length; i++) {
+   var currentValue = parseInt(Math.random()*(valormax-valormin)+valormin);;
+   if(currentValue > maxValue) {
+      maxValue = currentValue;
+      valori = i;
+   }
+   if(currentValue < minValue){
+       minValue= currentValue;
+       valorj= i;
+   }
+}
+//mostrar maximo y minimo y su indice
+console.log(maxValue+" pos: "+ valori);
+console.log(minValue+" pos: "+valorj);
+    }
+    //parseInt(Math.random()*(valormax-valormin)+valormin);
+    </script>
+</body>    
+</html>

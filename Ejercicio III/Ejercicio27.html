@@ -1,0 +1,33 @@
+<html>
+<title>Ejercicio27.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+    5.Usando la función del ejercicio 1, generar un array aleatorio de 20 elementos entre 20 y 100 y luego ordenarlo.
+    */ 
+   var  matriz=new Array();
+    function rellenar(matriz)
+{
+var num = 20,valormax=100, valormin=20,valor;
+largo = matriz.length;
+for(var i = 0; i < num; i++)
+   {
+    valor = parseInt(Math.random()*(valormax-valormin)+valormin);
+    matriz[i] = Math.round(valor);
+    barra = +valor+", ";
+   }
+   return barra;
+}
+document.write("[ ");
+for (var j = 0 ; j < 20; j++) {
+  
+document.write(rellenar(matriz));
+}
+document.write(" ]");
+    </script>
+</body>    
+</html>

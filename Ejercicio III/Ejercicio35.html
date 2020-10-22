@@ -1,0 +1,37 @@
+<html>
+<title>Ejercicio35.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+   12.Escribir una función que busque la cadena "arriba" en un texto. La función deberá informar si encuentra o no esta cadena en el 
+   texto y, si la encuentra, nos deberá mostrar el texto reemplazando "arriba" por "abajo".*/
+   
+   var keywords = ["abajo", "arriba"];
+var ejemplo = prompt("Introduce un texto");
+var resultado = "";
+var pos = -1
+
+
+//uso foreach para recorrer cada elemento del array
+keywords.forEach(function(element) {
+
+    //En caso de existir se asigna la posición en pos
+    pos = ejemplo.search(element.toString());
+
+    //Si existe
+    if(pos!=-1){
+    resultado += ejemplo.replace("arriba", "abajo");
+    }
+
+});
+
+//En caso de que no exista.
+if(pos === -1 && resultado === ""){resultado = "No existe ninguna de las palabras del array.";}
+console.log(resultado);
+    </script>
+</body>    
+</html>

@@ -1,0 +1,46 @@
+<html>
+<title>Ejercicio24.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+    2. Escribir una función que acepte al menos un argumento (el primer argumento debe ser obligatorio, 
+    mostrar un mensaje de error si no se indica, luego se pueden indicar tantos argumentos como desee el usuario) 
+    y que devuelva la suma y la media de todos los elementos. Comprobar que todos los argumentos sean números ç
+    e ignorar los que no lo sean,
+     mostrando un aviso (por ejemplo: ¡AVISO! El argumento número 3 "Hola" no es un número, lo ignoramos").
+    */ 
+   //Declarar variables 
+   var numarg= prompt("numero de argumentos a introducir");
+   function SumaArg() {
+    for (var i=0; i< numarg; i++) {
+       
+    var argumento = prompt("Introduce un texto");
+    if(argumento == null){
+        alert("Error");
+    }
+    if(argumento ==! Number){
+        alert("¡Aviso! El argumento numero"+i+argumento+" no es un numero, lo ignoramos");
+    }
+    //Funcion para contar caracteres
+    var total=0, res, numDatos, i ;
+    numDatos = numarg.length;
+    for (i= 0; i < numDatos; i++)
+    {
+         
+     total += numarg;
+    }
+    //Formula de la media
+  res = total/numDatos;
+  return res;
+} 
+      
+        console.log(contadorletra);
+    }
+    SumaArg();
+    </script>
+</body>    
+</html>

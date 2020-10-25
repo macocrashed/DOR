@@ -1,0 +1,47 @@
+<html>
+<title>Ejercicio44.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        /*
+       10-  Analiza los diferentes métodos de arrays y crea 3 ejercicios aplicados donde el usuario deba intervenir.
+        */
+        //Ejercicio 1
+        document.write("<h1>Ejercicio 1</h1>")
+
+        //declaramos variables
+    var fruits=new Array(5);
+     var valor, i;
+
+//Creamos array de strings introducidos por el usuario
+        for(i = 0; i < fruits.length; i++)
+        {
+            valor = prompt("Introduzca la palabra");
+            fruits[i] = valor;
+         }
+        document.write("[ "+fruits+" ]"+`</br>`);
+        var tamaño =fruits.length;//Sacamos la longitud del array fruits
+        document.write(tamaño+"<br>");
+        //Ejercicio 2
+        document.write("<h1>Ejercicio 2</h1>")
+
+        
+        document.write("[ "+fruits+" ]"+`</br>`);
+        //añadimos al array un valor con el push
+        fruits.push("haaland"); 
+        document.write("[ "+fruits+" ]"+`</br>`);
+        
+        //Ejercicio 3
+        document.write("<h1>Ejercicio 3</h1>")
+
+//usamos el metodo pop para eliminar la ultima posicion
+
+        document.write("[ "+fruits+" ]"+`</br>`);
+        fruits.pop();
+        document.write("[ "+fruits+" ]"+`</br>`);
+    </script>
+</body>    
+</html>

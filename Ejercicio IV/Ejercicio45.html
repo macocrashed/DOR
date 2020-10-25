@@ -1,0 +1,30 @@
+<html>
+<title>Ejercicio45.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        /*
+       11-   Realiza un programa para probar si el primer carácter de una cadena introducida por el usuario está en mayúsculas o no.
+        */
+        var strings = prompt(`Introduzca una palabra`);
+        var i= 0;
+        while(i < strings.length){
+
+        
+
+       var character = strings.charAt(i);
+       
+           if (character == character.toUpperCase()) {
+               alert ('Este primer caracter esta en mayusculas');
+           }
+           if (character == character.toLowerCase()){
+            alert ('Este primer caracter esta en minusculas');
+           }
+       
+        }
+    </script>
+</body>    
+</html>

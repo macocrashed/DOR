@@ -1,0 +1,45 @@
+<html>
+<title>Ejercicio46.html</title>
+<head>
+    
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        /*
+       12-   Realiza un script para buscar una fecha dentro de una cadena introducida por el usuario.
+        */
+        var strings = prompt("Introduzca un texto");
+         var RegExp= /([012][1-9]|3[01])(\/)(0[1-9]|1[012])\2(\d{4})/;
+//var i= 0; 
+
+
+      
+      if ((RegExp.test(strings)) && (strings!=" ")) {
+             console.log(strings);
+      } else {
+            console.log("No hay fechas en este texto");;
+      }
+
+
+/*
+while (i < strings.length){
+       var palabra = strings.charAt(i);
+       
+        if (palabra == RegExp) {
+            if(month < 10){
+                console.log(`${day}-0${month}-${year}`)
+            }else{
+                 console.log(`${day}-${month}-${year}`)
+            }			
+        }else{
+           
+            alert ("No hay fechas en este texto");
+        }
+       i++;
+        }    */ 
+// las variables a utilizar
+
+    </script>
+</body>    
+</html>

@@ -154,4 +154,75 @@ Perro.prototype = Object.create(Animal.prototype); // une los dos prototipos
 Perro.prototype.constructor = Perro; // definimos el constructor de perro otra vez, q es Perro.
 
 /* de esta forma, al unir los ,prototipos, perro ya puede usar la funcion correr. Sigue manteniendo su funcion prototipo ladrar. */
+//Propiedades de los objetos
+Object.defineProperty(perro1, "dueno",{//Por defecto todo falso
+    value: "Carlos",
+    writable: false, //No se puede reescribir la propiedad
+    configurable: false,
+    enumerable: false
+});
+perro1.pelo = "blanco";
+perro1.dueno = "Pedro";
+delete perro1.dueno;
+document.write("br"+perro1.dueno+"br");
+for (x in perro1){
+    document.write([x ])
+}
+//Metodo freeze. Prevenir cambios en objetos. Hay otros preventExtension o Seal
+let persona={
+    nombre: "Daniela",
+    mostrarNombre: function(){
+        console.log("NOmbre: "+this.nombre);
+    }
+};
+console.log(persona);
+persona.mostrarNombre();
+//Sloppy MOde vs USe Scrict: modo estricto y js cambia
+"use strict"
+var mivariable = 1;
+function test(){
+    mivariable = 5;
+    alert(mivariable);
+}
+function test2(p1, p2, p3){
+    alert(p1);
+    alert(p2);
+}
+//Clases
+class Persona{
+    constructor(nom, ape){
+        this.nombre = nom;
+        this.apellido = ape;
+    }
+}
+//static queEres(){
+    console.log("Los perros somos los mejores amigos del hombre");
+//}
+
+/*
+get getRaza(){
+    return this.raza
+}
+set setRaza(ra){
+    this.raza= ra;
+}*/
+const perro1 = new Perro("MArron", "marron", "frederioc");
+//Caracteristeicas De las clases
+//User Super para Usar un metodo de su padre
+class GAto{
+    constructor(nombre){
+        this.nombre = nombre;
+    }
+    hablar(){
+    console.log(this.nombre+ "hace ruido");
+    }
+}
+class Leon extends Gato{
+    hablar(){
+        super.hablar();
+        console.log(this.nombre + "maulla.");
+    }
+}
+var leon1 = new Leon("Simba");
+leon1.hablar();
 </script>

@@ -1,0 +1,62 @@
+
+<html>
+    <title>Ejercicio40.html</title>
+    <head>
+        
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            /*
+ACTIVIDAD 4
+
+Analiza el siguiente código y comenta las sentencias.
+*/
+//Creamos un Objeto
+const animal = {};
+//Object.defineProperty() define una nueva propiedad sobre un objeto(en este caso animal), o modifica una ya existente, y devuelve el objeto modificado.
+Object.defineProperty(animal, 'isHuman', {
+
+    value: false,
+
+    enumerable: false });
+//El método Object.create() crea un objeto nuevo, utilizando un objeto existente(en este caso animal) como el prototipo del nuevo objeto creado.
+const dinosaur = Object.create(animal);
+//Definimos las propiedades del nuevo objeto creado
+Object.defineProperty(dinosaur, 'isExtinct', {
+
+    value: true,
+
+    enumerable: false });
+//Creamos otro objeto
+const tRex = Object.create(dinosaur);
+//Definimos las propiedades del nuevo objeto creado
+Object.defineProperty(tRex, 'legs', {
+
+    value: 4,
+
+    enumerable: false });
+
+function getAllPropertiesOf(something) {
+
+    let properties = [];
+
+    let proto = something;
+
+    while (proto !== Object.prototype) {
+        //Con el metodo .concat concatenamos el array de propiedades del prototipo 
+        properties = properties.concat(Object.getOwnPropertyNames(proto));
+
+        proto = Object.getPrototypeOf(proto);     }
+
+    return properties; }
+//Mostramos por cosola el metodo creado para tomar todas las propiedades de el objeto que hayamos creado, este caso tRex.
+console.log(getAllPropertiesOf(tRex));
+
+  
+   
+
+
+        </script>
+    </body>    
+    </html>

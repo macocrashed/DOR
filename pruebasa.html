@@ -225,4 +225,42 @@ class Leon extends Gato{
 }
 var leon1 = new Leon("Simba");
 leon1.hablar();
+//Map: almacenar paresclave-valor
+var miMapa = new Map();
+miMapa.set(0, "cero");
+miMapa.set(1,"uno");
+for(var [clave, valor] of miMapa){
+    alert(clave+" = " + valor);
+}
+//mostrara 2 alertas; primero con "0 = cero" y seguundo con "1=uno"
+
+for(var clave of miMapa.keys()){
+    alert(clave);
+}
+//Mostrara 2 alertas; primero con "0" y segundo con "1"
+
+for(var valor of miMapa.values()){
+    alert(valor);
+}
+function test(){
+    try{
+        //no existe 
+        var a= Number(prompt("n"));
+        var b= Number(prompt("n2"));
+        if(isNan(a)||isNaN(b)){
+            throw new Error("no es n");
+        }
+        alert("el resultado es "+(a+b));
+    }
+    catch(error1){
+        alert("Error: "+error1);
+    }finally{
+        alert("Recarga la pagina");
+    }
+}
+test();
+//Eval
+eval("alert(´hola mundo)´");
+var cod = "2 <= 4";
+alert(eval(cod));
 </script>

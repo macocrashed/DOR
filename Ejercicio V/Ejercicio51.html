@@ -1,0 +1,56 @@
+
+<html>
+    <title>Ejercicio51.html</title>
+    <head>
+        
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            /*
+            ACTIVIDAD 3
+
+Analiza el siguiente código y comenta las sentencias.
+  */
+  //Creamos la clase tropicalBasket y definimos las variables
+const tropicalBasket = {
+
+    bananas: 3,
+
+    papayas: 0,
+
+    oranges: 7,
+
+    watermelons: 4
+
+};
+// creamos otra clase y definimos las variables
+const smallBasket = {
+
+    strawberries: 8,
+
+    grapes: 12 };
+
+const getFruitsDescription = (basket) => {
+    //Aqui listamos todas las frutas
+    const fruitsListed = Object.keys(basket);
+    //El método filter() crea un nuevo array con todas las frutas(elementos) que cumplan la condición implementada por la función dada.
+    const fruitsAvailable = fruitsListed.filter((fruit) => {return basket[fruit] > 0;
+
+    });
+    //El metodo join Une las frutas(elementos) que contiene la cesta en una cadena y luego la devolvemos
+    return 'This basket has: ' + fruitsAvailable.join(', ');
+
+};
+// mostramos por consola la lista de frutas.
+console.log(getFruitsDescription(tropicalBasket)); 
+console.log(getFruitsDescription(smallBasket));
+    
+   //creamos el constructor
+  
+   
+
+
+        </script>
+    </body>    
+    </html>

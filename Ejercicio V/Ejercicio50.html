@@ -1,6 +1,6 @@
 
 <html>
-    <title>Ejercicio40.html</title>
+    <title>Ejercicio50.html</title>
     <head>
         
         <meta charset="utf-8">
@@ -51,6 +51,7 @@ ViajerosC.prototype.constructor = ViajerosC;
 var viajero1 = new Viajeros();
 var viajero2 = new Viajeros();
 var viajero3 = new Viajeros();
+//Este metodo valida el codigo cliente de cada viajero
 function validarCod(){
     if(cod != null){
         alert("Existe ya un codigo de cliente");
@@ -60,11 +61,12 @@ function validarCod(){
     }
 
 }
+//Este metodo elimina un viajero
 function eliminarViajero(){
-    delete viajero1
+    delete viajero1;
     
 }
-
+//En este metodo mostramos por consola todos los datos de los viajeros
 function mostrarViajeros(){
     console.log(viajero1.nombre);
     console.log(viajero1.apellidos);
@@ -73,12 +75,13 @@ function mostrarViajeros(){
    
     
 }
-
+//Este metodo elimina un viajero
 function eliminarPais(){
     delete viajero1.paises;
     
 }
 //5
+//Llamamos a los metodos creados previamente
 validarCod();
 eliminarPais();
 eliminarViajero();

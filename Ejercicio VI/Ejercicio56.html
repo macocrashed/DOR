@@ -1,0 +1,32 @@
+
+<html>
+    <title>Ejercicio56.html</title>
+    <head>
+        
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <button onclick="myFunction1()">Click me</button>
+        <button onclick="myFunction2()">Click me</button>
+        <button onclick="myFunction3()">Click me</button>
+        <script>
+            /*
+ACTIVIDAD 2
+Crea tres botones en un documento html que al pulsar, uno te permita visitar la página anterior. Otro que al pulsar te permita visitar la página siguiente. 
+Y un tercero que permita ir a una página concreta que el usuario haya introducido. Muestra la cantidad de páginas del historial.
+    */
+    function myFunction1(){
+    ventana = window.history.back();
+    }
+    function myFunction2(){
+        ventana2 = window.history.forward();
+    }
+    function myFunction3(){
+        ventana3 = window.history.go(1);
+        console.log(window.history.length);
+    }
+
+
+        </script>
+    </body>    
+    </html>

@@ -30,33 +30,34 @@ Mover: Ubicará la pantalla en la posición indicada previamente por el usuario 
  Antes de mover la nueva pantalla tendrá que comprobar que la nueva posición de la ventana es posible teniendo en cuenta tanto la 
  posición como su alto y ancho y el tamaño de la pantalla.
  */
-    
+    var miVentanaa = window;
     function AbrirVentana(){
     
-    window.open(window.open("http://www.google.es" , "ventana1" , "width=400,height=400, position=center, scrollbars=NO"));
+    miVentanaa.open("http://www.google.es" , "ventana1" , "width=400,height=400, position=center, scrollbars=NO");
 
 
     }
     function CerrarVentana(){
-        window.close()
-        if(window.closed !== false){
+        
+        miVentanaa.close()
+        if(miVentanaa.closed !== false){
             console.log("No hay ventana que cerrar")
         }
     }
     function AmpliarVentana(){
-        window.moveTo(30,30);
-        window.resizeTo(screen.availWidth, screen.availHeight);
+        miVentanaa.moveTo(30,30);
+        miVentanaa.resizeTo(screen.availWidth, screen.availHeight);
         
     }
     function ReducirVentana(){
-        window.moveTo(30,30);
-        window.resizeTo(screen.availWidth, screen.availHeight);
+        miVentanaa.moveTo(30,30);
+        miVentanaa.resizeTo(screen.availWidth, screen.availHeight);
         
     }
     function MoverVentana(){
         var x =prompt("Introduzca x"), y= prompt("Introduzca y");
-        window.moveTo(x, y);
-        window.focus();
+        miVentanaa.moveTo(x, y);
+        miVentanaa.focus();
         
     }
     

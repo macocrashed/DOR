@@ -7,7 +7,7 @@
     </head>
     <body>
         <button onclick="myFunction1()">Click me</button>
-  
+        <button onclick="myFunction2()">Click me</button>
         <script>
             /*
 ACTIVIDAD 4
@@ -15,13 +15,12 @@ Usando location, crea un botón en un documento html que al pulsar, el script as
 se pueda ver el historial de la ventana. Crea otro botón igual, pero que no se pueda ver el historial de la venta. */
     function myFunction1(){
     window.location.assign("http://www.google.com");
-    window.history.length();
-    
-    
-
     }
+    function myFunction2(){
 
-
+    
+    window.location.replace("http://www.google.com");
+    }
 
         </script>
     </body>    

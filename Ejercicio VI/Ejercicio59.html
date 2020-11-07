@@ -15,11 +15,12 @@ Averigua utilizando el objeto screen, el tamaño de la barra de tareas de Window
 Crea un botón en un documento html que al pulsar, abra una nueva ventana y muestre esa información.
 
  */
-    barraWindows = window.screen.availHeight();
-    barraWindows2 = window.screen.availWidth();
+ 
+     
     function myFunction1(){
     
-    window.open(window.open("http://www.desarrolloweb.com" , "ventana1" , ""));
+    ventana =window.open("" , "ventana1" , "");
+   document.write( ventana.screen.availWidth()-ventana.screen.availHeight());
 
 
     }
